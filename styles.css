@@ -1,17 +1,19 @@
 * {
-  background-color: antiquewhite;
   font-family: "Inconsolata", monospace;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  
 }
 
 .container {
+  flex: 1;
   border: 1px black solid;
   min-height: 500px;
   min-width: 400px;
@@ -22,15 +24,23 @@ body {
   align-items: center;
   background-color: rgb(172, 152, 152);
   border-radius: 4%;
+  box-shadow: inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#curNum, #prevNum{
+  background-color: aliceblue;
 }
 
 .display {
   flex: 1;
   border: 4px black solid;
+  background-color:aliceblue;
   min-width: 300px;
   max-width: 300px;
   max-height: 80px;
-  margin-top: 20px;
+  min-height: 80px;
+  margin-top: 50px;
   border-radius: 10%;
     display: flex;  
     flex-direction: column;
@@ -43,32 +53,39 @@ body {
 
 .buttons {
   flex: 1;
-  margin: 40px;
+  margin: 15px 40px;
   min-height: 200px;
   max-height: 300px;
-  border: 2px blue solid;
   min-width: 300px;
   display: flex;
+  border: #7C7C7C solid 4px;
+  background-color: rgb(139, 150, 150);
+
 }
 
 button {
   flex: 1;
-  background-color: rgb(193, 223, 221);
-  padding: 10px;
+  padding: 1px;
   min-width: 50px;
-  max-height: 50px;
-  border-radius: 20%;
+  max-height: 30px;
   margin: 5px;
+  background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+  text-align: center;
+
 
 }
 
 .operatorDiv {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
   border-left: 2px black solid;
   flex: 1;
-  min-width: 100px;
+  min-width: 120px;
+  min-height: 250px;
   padding: 10px;
 }
 .numberButtons {
@@ -77,4 +94,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+}
+
+.logo{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
